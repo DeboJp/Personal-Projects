@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Affordable and professional web design">
+	  <meta name="keywords" content="web design, affordable web design, professional web design">
+  	<meta name="author" content="Brad Traversy">
+    <title>Black Flamingo | Services</title>
+    <style>
+
+    * {
+    	margin: 0;
+    	padding: 0;
+    	font-family: Century Gothic;
+    }
+
+    Body {
+    	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("1.jpg");
+    	height: 100vh;
+    	background-size: cover;
+    	background-position: center;
+    }
+
+    ul {
+    	list-style-type: none;
+    	float: right;
+    	margin-top: 25px;
+    }
+
+    ul li {
+    	display: inline-block;
+    }
+
+    ul li a {
+    	text-decoration: none;
+    	color: #fff;
+    	padding: 5px 25px;
+    	border: 1px solid transparent;
+    	transition: 0.6s ease;
+    }
+
+    ul li a:hover {
+    	background-color: #fff;
+    	color: #000;
+    }
+
+    ul li.active a{
+    	background-color: #fff;
+    	color: #000;
+    }
+    .logo img {
+    	float: left;
+    	width: 150px;
+    	height: auto;
+    }
+
+    .main {
+    	max-width: 1600px;
+    	margin: auto;
+    }
+
+    /* Global */
+    .container{
+      width:85%;
+      margin:auto;
+      overflow:hidden;
+    }
+
+    .button_1{
+      height:32px;
+      background:#000;
+      border:2;
+      padding-left: 20px;
+      padding-right:20px;
+      color:#ffffff;
+    }
+    .button_1:hover{
+      background-color: #fff;
+      color: #000;
+    }
+
+    .dark{
+      padding:20px;
+      background:#000;
+      color:#ffffff;
+      margin-top:100px;
+      margin-bottom:100px;
+    }
+
+    aside#sidebar{
+      float:right;
+      width:30%;
+      margin-top:10px;
+    }
+
+    aside#sidebar .quote input, aside#sidebar .quote textarea{
+      width:90%;
+      padding:12px;
+    }
+
+    /* Main-col */
+    article#main-col{
+      float:left;
+      width:65%;
+    }
+
+    /* Services */
+    ul#services li{
+      list-style: none;
+      padding:30px;
+      border: #cccccc solid 2px;
+      margin-bottom:10px;
+      background:#e6e6e6;
+    }
+
+    footer{
+      padding:20px;
+      margin-top:20px;
+      color:#ffffff;
+      background-color:#000;
+      text-align: center;
+    }
+
+      header{
+        padding-bottom:150px;
+      }
+
+    .title {
+      position: absolute;
+      top: 15%;
+      left: 34%;
+      transform: translate(-50%,-50%);
+      color: white;
+    }
+  }
+    </style>
+  </head>
+  <body>
+    <header>
+
+      <div class="main">
+  			<div class="logo">
+          <a href="home.html">
+            <img src="logo.png">
+        </a>
+    </div>
+  			<ul>
+  				<li><a href="home.html">Home</a></li>
+  				<li class="active"><a href="services.html">Services</a></li>
+  				<li><a href="Gallery.html">Gallery</a></li>
+  				<li><a href="About Us.html">About</a></li>
+  				<li><a href="Contact Us.html">Contact Us</a></li>
+          <li><a href="Login.html">Login</a></li>
+  			</ul>
+      </div>
+
+
+      		<font color="white">
+      		<br>
+      		<p id = "salute" ></p>
+
+      		<p id="demo" ></p>
+      		<script>
+      										// Initialize date
+      										var mydate = new Date();
+      										var year = mydate.getYear() + 1900;
+      										var day = mydate.getDay();
+      										var month = mydate.getMonth();
+      										var daym = mydate.getDate();
+      										// Preparing to spit on the document :)
+
+      										var dayarray = new Array("Sunday","Monday","Tuesday", "Wednesday", "Thursday" , "Friday", "Saturday");
+      										var montharray = new Array ("January","February","March", "April", "May" , "June", "July","August", "September", "October" , "November", "December");
+      										document.write(dayarray[day] + " "  +montharray[month]+ " "+daym+  " " +year + "<br>");
+      										// End Date Init
+
+      										// Initialize time to be able to salute People
+      										var currentTime = new Date();
+      										var h = currentTime.getHours();
+      										hourarray = ["It's Midnight", "Good Night","Good Night","Good Night","Good Night","Good Morning","Good Morning", "Good Morning", "Good Morning", "Good Morning", "Good Morning", "Good Morning", " It's Lunch Time",
+      														 "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Evening", "Good Evening", "Good Evening", "Good Evening"];
+      										var salute = document.getElementById("salute").innerHTML = hourarray[h];
+      										// End Salute
+
+      										// Display the Local time with the magic of this method (toLocaleTimeString()) and set the interval to 1second
+      										var myVar = setInterval(myTimer, 0000);
+      										function myTimer() {
+      												var d = new Date();
+      												document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+      										}
+
+      		</script>
+      		</font>
+
+      <div class="title">
+  			<h1><u>Black Flammingo Services</u></h1>
+          </div>
+
+    </header>
+
+    <section id="main">
+      <div class="container">
+        <article id="main-col">
+          <ul id="services">
+            <li>
+              <h3>Risk-Free Product Trial</h3>
+              <p>Get out and get moving in your new atire. If it doesn’t feel right for you after 30 days, return it with no questions asked. No returns if damaged.</p>
+						  <p></p>
+            </li>
+            <li>
+              <h3>Expert Fitting</h3>
+              <p> Get expert fitting options and opinions on clothings & sizes, pant hemming, styling, and product recommendations personalized just for you. </p>
+						  <p>Pricing: $10 Every Time Utilized</p>
+            </li>
+            <li>
+              <h3>Trial Run</h3>
+              <p> Whether you’re a beginner or marathoner, this is your seasonal check-up with a Black Flamingo+ Expert to find the perfect shoe and clothing for your perfect run. </p>
+						  <p>Pricing: $25 per month (Subscription required)</p>
+            </li>
+            <li>
+              <h3> Black-Flamingo Warranty </h3>
+              <p> We stand behind all of our shoes and gear. If your Black Flamingo shoes or apparel develop a material or workmanship flaw within two years of the manufacture date, we want to get you back in the game. Some Black Flamingo products have specific written guarantees and/or warranties. In those cases, details and return information would be included on the label, hang tag, or a warranty card that came with the item. </p>
+						  <p>Warranty: 30 days to 2 years</p>
+            </li>
+            <li>
+              <h3>Black Flamingo Grants and Donations</h3>
+              <p> Community has been at the core of who we are and what we do. Harnessing the power of sport as a unifying force, we’re committed to helping kids reach their greatest potential and creating more equal playing fields for all. Because our biggest wins happen when we work as a team, we offer grants and donations for schools, community-based organizations, and individuals to help them create a better tomorrow. </p>
+              <p></p>
+            </li>
+            <li>
+              <h3> Student Discount </h3>
+              <p> College and university students in the US can take advantage of a 10% discount on Nike.com. To claim the discount, simply verify your student status and you'll receive a single-use promo code for 10% off your entire purchase. </p>
+              <p>10% discount for Students - verification will be required - 1 time usage</p>
+            </li>
+            <li>
+              <h3> Payment Methods</h3>
+              <p> We want to make buying your favorite Nike shoes and gear online fast and easy. So when it comes time to make your Nike.com purchase, you can virtually use any payment method. </p>
+              <p> We accept all Methods of Payment </p>
+            </li>
+            <li>
+              <h3>Black Flamingo Assist</h3>
+              <p>The backroom just got a lot bigger. Get connected to the expansive inventory available on BlackFlamingo.com and have it shipped to you anywhere in the World for free. </p>
+              <p>Go to: Black Flamingo | Assist </p>
+            </li>
+          </ul>
+        </article>
+
+        <aside id="sidebar">
+          <div class="dark">
+            <h3>Send Feedback</h3>
+            <form class="quote" action="services_submit.html">
+  						<div>
+  							<label>Name</label><br>
+  							<input type="text" placeholder="Name">
+  						</div>
+  						<div>
+  							<label>Email</label><br>
+  							<input type="email" placeholder="Emial Address">
+  						</div>
+  						<div>
+  							<label>Message</label><br>
+  							<textarea placeholder="Message"></textarea>
+  						</div>
+  						<button class="button_1" type="submit">Send</button>
+					</form>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <p>Black Flamingo, Copyright &copy; 2023</p>
+    </footer>
+  </body>
+</html>

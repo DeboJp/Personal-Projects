@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Black Flamingo | Gallery</title>
+<style>
+body {
+	background-color: lightgrey;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+}
+
+header {
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("1.jpg");
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+ul {
+	list-style-type: none;
+	float: right;
+	margin-top: 25px;
+}
+
+ul li {
+	display: inline-block;
+}
+
+ul li a {
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 25px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+}
+
+ul li a:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+ul li.active a{
+	background-color: #fff;
+	color: #000;
+}
+.logo img {
+	float: left;
+	width: 150px;
+	height: auto;
+}
+
+.main {
+	max-width: 1600px;
+	margin: auto;
+}
+
+.title {
+	position: absolute;
+	top: 21%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.title h1 {
+	color: white;
+	font-size: 70px;
+}
+
+.slideshow img {
+position: absolute;
+top: 60%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+.button{
+	position: absolute;
+	top: 94%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.btn {
+	Border: 1px solid #fff;
+	padding: 10px 30px;
+	color: #fff;
+	text-decoration: none;
+	transition: 0.6s ease;
+}
+
+.btn:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+
+    footer{
+      padding:20px;
+      margin-top:0px;
+      color:#ffffff;
+      background-color:#000;
+      text-align: center;
+    }
+
+
+</style>
+</head>
+<body>
+<script>
+	var i = 0;
+	var images = [];
+	var time = 2000;
+
+	images[0] = 'image1.jpg';
+	images[1] = 'image2.jpg';
+	images[2] = 'image3.jpg';
+	images[3] = 'image4.jpg';
+	images[4] = 'image5.jpg';
+	images[5] = 'image6.jpg';
+	images[6] = 'image7.jpg';
+	images[7] = 'image8.jpg';
+	images[8] = 'image9.jpg';
+	images[9] = 'image10.jpg';
+	images[10] = 'image11.jpg';
+	images[11] = 'image12.jpg';
+	images[12] = 'image13.jpg';
+	images[13] = 'image14.jpg';
+	images[14] = 'image15.jpg';
+
+	function changeImg(){
+		document.slide.src = images[i];
+
+		if(i < images.length - 1){
+			i++;
+		} else {
+			i = 0;
+		}
+
+		setTimeout("changeImg()", time);
+	}
+
+	window.onload = changeImg;
+
+</script>
+	<header>
+		<div class="slideshow">
+		<img name="slide" width="960" height="540">
+	</div>
+		<div class="main">
+			<div class="logo">
+				<a href="home.html">
+					<img src="logo.png">
+			</a>
+		</div>
+			<ul>
+				<li><a href="home2.0.html">Home</a></li>
+				<li><a href="services2.html">Services</a></li>
+				<li class="active"><a href="Gallery2.html">Gallery</a></li>
+				<li><a href="About Us2.html">About</a></li>
+				<li><a href="Contact Us2.html">Contact Us</a></li>
+			</ul>
+		</div>
+
+		<font color="white">
+		<br>
+		<p id = "salute" ></p>
+
+		<p id="demo" ></p>
+		<script>
+										// Initialize date
+										var mydate = new Date();
+										var year = mydate.getYear() + 1900;
+										var day = mydate.getDay();
+										var month = mydate.getMonth();
+										var daym = mydate.getDate();
+										// Preparing to spit on the document :)
+
+										var dayarray = new Array("Sunday","Monday","Tuesday", "Wednesday", "Thursday" , "Friday", "Saturday");
+										var montharray = new Array ("January","February","March", "April", "May" , "June", "July","August", "September", "October" , "November", "December");
+										document.write(dayarray[day] + " "  +montharray[month]+ " "+daym+  " " +year + "<br>");
+										// End Date Init
+
+										// Initialize time to be able to salute People
+										var currentTime = new Date();
+										var h = currentTime.getHours();
+										hourarray = ["It's Midnight", "Good Night","Good Night","Good Night","Good Night","Good Morning","Good Morning", "Good Morning", "Good Morning", "Good Morning", "Good Morning", "Good Morning", " It's Lunch Time",
+														 "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Evening", "Good Evening", "Good Evening", "Good Evening"];
+										var salute = document.getElementById("salute").innerHTML = hourarray[h];
+										// End Salute
+
+										// Display the Local time with the magic of this method (toLocaleTimeString()) and set the interval to 1second
+										var myVar = setInterval(myTimer, 0000);
+										function myTimer() {
+												var d = new Date();
+												document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+										}
+
+		</script>
+		</font>
+
+		<div class="title">
+			<center>
+			<h1>New Apparel In Stores <br> Check it Out</h1>
+		</center>
+		</div>
+
+		<div class="button">
+					<a href="https://blackflamingoco.com/" class="btn">SHOP NOW</a>
+		</div>
+	</header>
+	<footer>
+		<p>Black Flamingo, Copyright &copy; 2023</p>
+	</footer>
+</body>
+</html>

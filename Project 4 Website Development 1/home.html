@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Black Flamingo</title>
+<style>
+body {
+	background-color: lightgrey;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+}
+
+header {
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("1.jpg");
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+ul {
+	list-style-type: none;
+	float: right;
+	margin-top: 25px;
+}
+
+ul li {
+	display: inline-block;
+}
+
+ul li a {
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 25px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+}
+
+ul li a:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+ul li.active a{
+	background-color: #fff;
+	color: #000;
+}
+.logo img {
+	float: left;
+	width: 150px;
+	height: auto;
+}
+
+.main {
+	max-width: 1600px;
+	margin: auto;
+}
+
+.title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.title h1 {
+	color: white;
+	font-size: 70px;
+}
+
+footer{
+	padding:20px;
+	margin-top:0px;
+	color:#ffffff;
+	background-color:#000;
+	text-align: center;
+}
+
+</style>
+</head>
+<body>
+	<header>
+		<div class="main">
+			<div class="logo">
+				<a href="home.html">
+					<img src="logo.png">
+</a>
+			</div>
+			<ul>
+				<li class="active"><a href="home.html">Home</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="Gallery.html">Gallery</a></li>
+				<li><a href="About Us.html">About</a></li>
+				<li><a href="Contact Us.html">Contact Us</a></li>
+				<li><a href="Login.html">Login</a></li>
+			</ul>
+		</div>
+
+		<font color="white">
+<br>
+		<p id = "salute" ></p>
+
+		<p id="demo" ></p>
+		<script>
+										// Initialize date
+										var mydate = new Date();
+										var year = mydate.getYear() + 1900;
+										var day = mydate.getDay();
+										var month = mydate.getMonth();
+										var daym = mydate.getDate();
+										// Preparing to spit on the document :)
+
+										var dayarray = new Array("Sunday","Monday","Tuesday", "Wednesday", "Thursday" , "Friday", "Saturday");
+										var montharray = new Array ("January","February","March", "April", "May" , "June", "July","August", "September", "October" , "November", "December");
+										document.write(dayarray[day] + " "  +montharray[month]+ " "+daym+  " " +year + "<br>");
+										// End Date Init
+
+										// Initialize time to be able to salute People
+										var currentTime = new Date();
+										var h = currentTime.getHours();
+										hourarray = ["It's Midnight", "Good Night","Good Night","Good Night","Good Night","Good Morning","Good Morning", "Good Morning", "Good Morning", "Good Morning", "Good Morning", "Good Morning", " It's Lunch Time",
+														 "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Evening", "Good Evening", "Good Evening", "Good Evening"];
+										var salute = document.getElementById("salute").innerHTML = hourarray[h];
+										// End Salute
+
+										// Display the Local time with the magic of this method (toLocaleTimeString()) and set the interval to 1second
+										var myVar = setInterval(myTimer, 0000);
+										function myTimer() {
+												var d = new Date();
+												document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+										}
+
+		</script>
+	</font>
+
+		<div class="title">
+			<h1>Black Flammingo</h1>
+	</header>
+
+	<footer>
+		<p>Black Flamingo, Copyright &copy; 2023</p>
+	</footer>
+
+</body>
+</html>

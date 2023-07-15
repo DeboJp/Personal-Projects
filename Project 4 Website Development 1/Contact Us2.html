@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Black Flamingo | Contact Us</title>
+    <style>
+
+    body{
+      margin: 0;
+      padding: 0;
+      font-family: Century Gothic;
+      background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("1.jpg");
+    	height: 100vh;
+    	background-size: cover;
+    	background-position: center;
+    }
+
+    ul {
+    	list-style-type: none;
+    	float: right;
+    	margin-top: 25px;
+    }
+
+    ul li {
+    	display: inline-block;
+    }
+
+    ul li a {
+    	text-decoration: none;
+    	color: #fff;
+    	padding: 5px 25px;
+    	border: 1px solid transparent;
+    	transition: 0.6s ease;
+    }
+
+    ul li a:hover {
+    	background-color: #fff;
+    	color: #000;
+    }
+
+    ul li.active a{
+    	background-color: #fff;
+    	color: #000;
+    }
+    .logo img {
+    	float: left;
+    	width: 150px;
+    	height: auto;
+    }
+
+    .main {
+    	max-width: 1600px;
+    	margin: auto;
+    }
+
+    .contact-form{
+      width: 85%;
+      max-width: 600px;
+      background: #f1f1f1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      padding: 30px 40px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 0 20px #000000b3;
+      font-family: Century Gothic;
+    }
+    .contact-form h1{
+      margin-top: 0;
+      font-weight: 200;
+    }
+    .txtb{
+      border:1px solid gray;
+      margin: 8px 0;
+      padding: 12px 18px;
+      border-radius: 8px;
+    }
+    .txtb label{
+      display: block;
+      text-align: left;
+      color: #333;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+    .txtb input,.txtb textarea{
+      width: 100%;
+      border: none;
+      background: none;
+      outline: none;
+      font-size: 18px;
+      margin-top: 6px;
+    }
+    .btn{
+      display: inline-block;
+      background: #000000;
+      padding: 14px 0;
+      color: white;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 8px;
+      width: 100%;
+      transition: 0.6s ease;
+    }
+
+    .btn:hover {
+      background-color:#444444;
+      color: #fff;
+    }
+
+    .contact {
+      position: absolute;
+      top: 125%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    .button {
+      position: absolute;
+      top: 177%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    .btnn {
+      Border: 1px solid #fff;
+      padding: 10px 30px;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.6s ease;
+    }
+
+    .btnn:hover{
+      background-color: #fff;
+      color: #000;
+    }
+
+    .title {
+    	position: absolute;
+    	top: 170%;
+    	left: 50%;
+    	transform: translate(-50%,-50%);
+    }
+
+    .title h1 {
+    	color: white;
+    	font-size: 30px;
+    }
+
+    footer{
+      padding:10px;
+      margin-top:20px;
+      color:#ffffff;
+      background-color:#000;
+      text-align: center;
+    }
+
+    .momo{
+      position: absolute;
+      left: 12%;
+      top: -2%;
+    }
+
+    </style>
+  </head>
+  <body>
+  <div class="contact-form" action="services_submit.html">
+    <h1>Contact Us</h1>
+    <div class="txtb">
+      <label>Full Name :</label>
+      <input type="text" name="" value="" placeholder="Enter Your Name">
+    </div>
+
+    <div class="txtb">
+      <label>Email :</label>
+      <input type="email" name="" value="" placeholder="Enter Your Email">
+    </div>
+
+    <div class="txtb">
+      <label>Phone Number :</label>
+      <input type="text" name="" value="" placeholder="Enter Your Phone Number">
+    </div>
+
+    <div class="txtb">
+      <label>Message :</label>
+      <textarea></textarea>
+    </div>
+    <a href="feedback_submit.html" class="btn">Send</a>
+  </div>
+
+  <header>
+    <div class="main">
+      <div class="logo">
+        <a href="home.html">
+          <img src="logo.png">
+      </a>
+    </div>
+      <ul>
+        <li><a href="home2.0.html">Home</a></li>
+        <li><a href="services2.html">Services</a></li>
+        <li><a href="Gallery2.html">Gallery</a></li>
+        <li><a href="About Us2.html">About</a></li>
+        <li class="active"><a href="Contact Us2.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="contact">
+        <img src="Contact us.jpg" width="1200" height="675">
+    </div>
+  <div class="button">
+          <a href="mailto:21dpaul@aisdhaka.org?Subject=Customer%20Service" target="_black" class="btnn">Email</a>
+    </div>
+    <div class="title">
+      <center>
+      <h1>Black Flamingo | Direct E-Mail</h1>
+    </center>
+    </div>
+
+
+
+
+<div class="momo">
+    <font color="white">
+    <br>
+    <p id = "salute" ></p>
+
+    <p id="demo" ></p>
+    <script>
+                    // Initialize date
+                    var mydate = new Date();
+                    var year = mydate.getYear() + 1900;
+                    var day = mydate.getDay();
+                    var month = mydate.getMonth();
+                    var daym = mydate.getDate();
+                    // Preparing to spit on the document :)
+
+                    var dayarray = new Array("Sunday","Monday","Tuesday", "Wednesday", "Thursday" , "Friday", "Saturday");
+                    var montharray = new Array ("January","February","March", "April", "May" , "June", "July","August", "September", "October" , "November", "December");
+                    document.write(dayarray[day] + " "  +montharray[month]+ " "+daym+  " " +year + "<br>");
+                    // End Date Init
+
+                    // Initialize time to be able to salute People
+                    var currentTime = new Date();
+                    var h = currentTime.getHours();
+                    hourarray = ["It's Midnight", "Good Night","Good Night","Good Night","Good Night","Good Morning","Good Morning", "Good Morning", "Good Morning", "Good Morning", "Good Morning", "Good Morning", " It's Lunch Time",
+                             "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Evening", "Good Evening", "Good Evening", "Good Evening"];
+                    var salute = document.getElementById("salute").innerHTML = hourarray[h];
+                    // End Salute
+
+                    // Display the Local time with the magic of this method (toLocaleTimeString()) and set the interval to 1second
+                    var myVar = setInterval(myTimer, 0000);
+                    function myTimer() {
+                        var d = new Date();
+                        document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+                    }
+
+    </script>
+    </font>
+</div>
+
+
+
+
+  </header>
+
+  <li>
+    <h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></h3>
+    <h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></h3>
+    <h3><br><br><br><br><br><br><br><br><br><br></h3>
+
+  </li>
+
+  <footer>
+    <p>Black Flamingo, Copyright &copy; 2023</p>
+  </footer>
+
+
+  </body>
+</html>

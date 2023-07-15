@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Century Gothic;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("1.jpg");
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+ul {
+	list-style-type: none;
+	float: right;
+	margin-top: 25px;
+}
+
+ul li {
+	display: inline-block;
+}
+
+ul li a {
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 25px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+}
+
+ul li a:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+ul li.active a{
+	background-color: #fff;
+	color: #000;
+}
+.logo img {
+	float: left;
+	width: 150px;
+	height: auto;
+}
+
+.main {
+	max-width: 1600px;
+	margin: auto;
+}
+
+
+/* style the container */
+.container {
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%,-50%);
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  background-color: rgb(255, 255, 255, 0.9);
+  padding: 40px 0 30px 0;
+}
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+  opacity: 2;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 45px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  	position: absolute;
+  	top: 70%;
+  	left: 50%;
+  	transform: translate(-50%,-50%);
+  text-align: center;
+  background-color: #666;
+  background-color: rgb(0, 0, 0, 0.799999);
+  border-radius: 4px 4px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+.momo{
+  padding-bottom: 20px;
+}
+
+footer{
+	padding:10px;
+	margin-top:0px;
+	color:#ffffff;
+	background-color:#000;
+	text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+  <header>
+		<div class="main">
+			<div class="logo">
+				<a href="home.html">
+					<img src="logo.png">
+</a>
+			</div>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="Gallery.html">Gallery</a></li>
+				<li><a href="About Us.html">About</a></li>
+				<li><a href="Contact Us.html">Contact Us</a></li>
+				<li class="active"><a href="Login.html">Login</a></li>
+			</ul>
+		</div>
+
+        <font color="white">
+        <br>
+        <p id = "salute" ></p>
+
+        <p id="demo" ></p>
+        <script>
+                        // Initialize date
+                        var mydate = new Date();
+                        var year = mydate.getYear() + 1900;
+                        var day = mydate.getDay();
+                        var month = mydate.getMonth();
+                        var daym = mydate.getDate();
+                        // Preparing to spit on the document :)
+
+                        var dayarray = new Array("Sunday","Monday","Tuesday", "Wednesday", "Thursday" , "Friday", "Saturday");
+                        var montharray = new Array ("January","February","March", "April", "May" , "June", "July","August", "September", "October" , "November", "December");
+                        document.write(dayarray[day] + " "  +montharray[month]+ " "+daym+  " " +year + "<br>");
+                        // End Date Init
+
+                        // Initialize time to be able to salute People
+                        var currentTime = new Date();
+                        var h = currentTime.getHours();
+                        hourarray = ["It's Midnight", "Good Night","Good Night","Good Night","Good Night","Good Morning","Good Morning", "Good Morning", "Good Morning", "Good Morning", "Good Morning", "Good Morning", " It's Lunch Time",
+                                 "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Afternoon", "Good Evening", "Good Evening", "Good Evening", "Good Evening"];
+                        var salute = document.getElementById("salute").innerHTML = hourarray[h];
+                        // End Salute
+
+                        // Display the Local time with the magic of this method (toLocaleTimeString()) and set the interval to 1second
+                        var myVar = setInterval(myTimer, 0000);
+                        function myTimer() {
+                            var d = new Date();
+                            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+                        }
+
+        </script>
+        </font>
+
+
+<div class="container">
+  <form action="home2.0.html">
+    <div class="row">
+      <div class="momo">
+      <h2 style="text-align:center">Login with Social Media or Manually</h2>
+    </div>
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+
+      <div class="col">
+        <a href="#" class="fb btn">
+          <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+         </a>
+        <a href="#" class="twitter btn">
+          <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+        </a>
+        <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+          </i> Login with Google+
+        </a>
+      </div>
+
+      <div class="col">
+        <div class="hide-md-lg">
+          <p>Or sign in manually:</p>
+        </div>
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+      </div>
+
+    </div>
+  </form>
+</div>
+
+<div class="bottom-container">
+  <div class="row">
+    <div class="col">
+      <a href="#" style="color:white" class="btn">Sign up</a>
+    </div>
+    <div class="col">
+      <a href="#" style="color:white" class="btn">Forgot password?</a>
+    </div>
+  </div>
+</div>
+</header>
+
+
+	<footer>
+		<p>Black Flamingo, Copyright &copy; 2019</p>
+	</footer>
+
+</body>
+</html>
